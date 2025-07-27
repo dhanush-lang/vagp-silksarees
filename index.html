@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Authentic Kanchipuram & Arni Silk Sarees Online | VAGP Pure Silk & Silkfast Zari</title>
-  <meta name="description" content="Buy authentic handloom Kanchipuram & Arni silk sarees from Tamil Nadu. Pure silk & silkfast zari sarees at best prices. Free shipping across India. Shop now!">
-  <meta name="keywords" content="silk sarees, pure silk sarees, silkfast zari sarees, Kanchipuram sarees, Arni silk, Tamil Nadu sarees, traditional silk, handloom sarees">
+  <meta name="description" content="Buy authentic handloom Kanchipuram & Arni silk sarees from Tamil Nadu. Pure silk & silkfast zari sarees at best prices with free shipping. 100% genuine silk with government certification.">
+  <meta name="keywords" content="silk sarees, pure silk sarees, silkfast zari sarees, Kanchipuram sarees, Arni silk, Tamil Nadu sarees, traditional silk, handloom sarees, buy silk sarees online, authentic kanjeevaram sarees">
   <meta name="author" content="VAGP Silk Sarees">
   <link rel="canonical" href="https://www.sadhanasilksarees.com">
   <meta name="robots" content="index,follow">
@@ -16,14 +16,16 @@
   <meta property="og:description" content="Discover our exquisite collection of authentic Tamil Nadu silk sarees - Kanjeevaram, Arni, and more. Handcrafted with traditional techniques.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.sadhanasilksarees.com">
-  <meta property="og:image" content="https://www.sadhanasilksarees.com/images/og-image.jpg">
+  <meta property="og:image" content="https://www.sadhanasilksarees.com/images/og-image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="VAGP Silk Sarees">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VAGP Silk Sarees | Premium Pure Silk & Silkfast Zari Sarees">
   <meta name="twitter:description" content="Discover authentic Tamil Nadu silk sarees - Kanjeevaram, Arni, and more. Handcrafted with traditional techniques.">
-  <meta name="twitter:image" content="https://www.sadhanasilksarees.com/images/og-image.jpg">
+  <meta name="twitter:image" content="https://www.sadhanasilksarees.com/images/og-image.webp">
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -33,6 +35,7 @@
       "name": "VAGP Silk Sarees",
       "description": "Authentic Kanchipuram & Arni silk sarees from Tamil Nadu.",
       "url": "https://www.sadhanasilksarees.com",
+      "logo": "https://www.sadhanasilksarees.com/images/logo.webp",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "123 Silk Street",
@@ -41,11 +44,16 @@
         "postalCode": "632301",
         "addressCountry": "IN"
       },
-      "telephone": "+918838043994"
+      "telephone": "+918838043994",
+      "openingHours": "Mo-Sa 10:00-20:00",
+      "priceRange": "₹₹₹"
     }
   </script>
 
   <!-- Preload Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" as="style">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
 
@@ -90,6 +98,7 @@
     img {
       max-width: 100%;
       height: auto;
+      display: block;
     }
     
     /* Header Styles */
@@ -121,10 +130,23 @@
     nav a {
       font-weight: 500;
       transition: opacity 0.3s;
+      padding: 5px 0;
+      position: relative;
     }
     
-    nav a:hover {
-      opacity: 0.8;
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s;
+    }
+    
+    nav a:hover::after {
+      width: 100%;
     }
     
     .menu-toggle {
@@ -183,6 +205,18 @@
       margin-bottom: 40px;
       color: var(--primary-color);
       font-size: clamp(1.8rem, 3vw, 2.5rem);
+      position: relative;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary-color);
     }
     
     /* Circle Container Animation */
@@ -244,11 +278,15 @@
       color: white;
       font-weight: 600;
       font-size: 1.1rem;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .category-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     
     /* Product Cards */
@@ -257,22 +295,23 @@
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     
     .product-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
     
     .product-image {
-      width:100%;
-    
+      height: 300px;
       overflow: hidden;
+      position: relative;
     }
     
     .product-image img {
       width: 100%;
-      height:auto;
+      height: 100%;
       object-fit: cover;
       transition: transform 0.5s;
     }
@@ -302,14 +341,18 @@
       display: inline-block;
       background-color: var(--primary-color);
       color: white;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border-radius: 5px;
       font-weight: 500;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
+      min-height: 44px;
+      min-width: 120px;
+      text-align: center;
     }
     
     .btn:hover {
       background-color: #b7154d;
+      transform: translateY(-2px);
     }
     
     /* About Section */
@@ -323,14 +366,14 @@
       margin-bottom: 20px;
       color: var(--text-light);
     }
-      /* Contact Section */
+    
+    /* Contact Section */
     .contact-section {
       background: rgba(22, 174, 176, 0.9);
       padding: 60px 20px;
       color: rgb(34, 8, 130);
       text-align: center;
       position: relative;
-    
     }
 
     .contact-section h2 {
@@ -343,7 +386,6 @@
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
-      
     }
 
     .contact-cards {
@@ -352,7 +394,6 @@
       gap: 30px;
       flex-wrap: wrap;
       margin-bottom: 30px;
-         
     }
 
     .contact-card {
@@ -361,12 +402,17 @@
       border-radius: 12px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       text-align: center;
-          background-color: #b82547;
+      background-color: #b82547;
       width: 180px;
       cursor: pointer;
       transition: transform 0.3s, box-shadow 0.3s;
-      backdrop-filter:white;
+      backdrop-filter: white;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .contact-card i {
@@ -386,6 +432,7 @@
       box-shadow: 0 10px 25px rgba(0,255,0,0.2);
       background: rgba(228, 12, 62, 0.584);
     }
+    
     /* Footer */
     footer {
       background-color: var(--primary-color);
@@ -427,6 +474,22 @@
       opacity: 0.9;
     }
     
+    .footer-section ul {
+      list-style: none;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+      transition: opacity 0.3s;
+    }
+    
+    .footer-section ul li a:hover {
+      opacity: 0.8;
+    }
+    
     .social-icons {
       display: flex;
       gap: 15px;
@@ -441,11 +504,12 @@
       height: 40px;
       background-color: rgba(255,255,255,0.1);
       border-radius: 50%;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
     
     .social-icons a:hover {
       background-color: rgba(255,255,255,0.2);
+      transform: translateY(-3px);
     }
     
     .social-icons i {
@@ -486,6 +550,22 @@
     
     .whatsapp-float:hover {
       transform: scale(1.1);
+    }
+    
+    /* Breadcrumbs */
+    .breadcrumbs {
+      padding: 15px 20px;
+      background-color: #f5f5f5;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumbs a {
+      color: var(--primary-color);
+    }
+    
+    .breadcrumbs span {
+      margin: 0 5px;
+      color: var(--text-light);
     }
     
     /* Animations */
@@ -538,6 +618,12 @@
       .product-image {
         height: 250px;
       }
+      
+      .contact-card {
+        width: 150px;
+        min-height: 150px;
+        padding: 20px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -554,13 +640,27 @@
       .category-grid, .product-grid {
         grid-template-columns: 1fr;
       }
+      
+      .product-image {
+        height: 200px;
+      }
+      
+      .contact-card {
+        width: 100%;
+        max-width: 200px;
+      }
+      
+      .btn {
+        padding: 10px 15px;
+        min-width: 100px;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>VAGP Silk Sarees </h1>
+    <h1 class="logo">VAGP Silk Sarees</h1>
     <div class="menu-toggle">
       <i class="fas fa-bars"></i>
     </div>
@@ -569,7 +669,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#categories">Location</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="file:///C:/Users/dhanu/OneDrive/Documents/sareess/contact.html">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -588,7 +688,7 @@
         <a href="/pure-silk-sarees" class="category-card">
           Pure Silk Sarees
         </a>
-        <a href="file:///C:/Users/dhanu/OneDrive/Documents/sareess/sadhana.html" class="category-card">
+        <a href="/silkfast-zari-sarees" class="category-card">
           Silkfast Zari Sarees
         </a>
         <a href="/kanchipuram-sarees" class="category-card">
@@ -606,140 +706,144 @@
       <div class="product-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="1.jpg" loading="lazy" width="300" height="400" alt="Red Banarasi Silk Kanchipuram Saree with Zari Border">
+            <img src="1.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Red Banarasi Silk Kanchipuram Saree with Zari Border - Handwoven Pure Silk with Gold Zari Work"
+                 srcset="1-300w.webp 300w, 1-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
             <h3>Red Banarasi Silk Kanchipuram Saree</h3>
-           
+            <p>₹7,999</p>
             <a href="/product/red-banarasi-silk" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="2.jpg" loading="lazy" width="300" height="400" alt="Blue Kanchipuram Silk Saree with Temple Border">
+            <img src="2.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Blue Kanchipuram Silk Saree with Temple Border - Authentic Handwoven Silk"
+                 srcset="2-300w.webp 300w, 2-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
             <h3>Blue Kanchipuram Silk Saree</h3>
-          
+            <p>₹8,499</p>
             <a href="/product/blue-kanchipuram" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="3.jpg" loading="lazy" width="300" height="400" alt="Green Pure Silk Saree with Gold Zari Work">
+            <img src="3.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Green Pure Silk Saree with Gold Zari Work - Traditional Tamil Nadu Design"
+                 srcset="3-300w.webp 300w, 3-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
             <h3>Green Pure Silk Saree</h3>
-
+            <p>₹9,299</p>
             <a href="/product/green-silk" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="20.jpg" loading="lazy" width="300" height="400" alt="Gold Zari Silk Saree Traditional Tamil Nadu Design">
+            <img src="4.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Gold Zari Silk Saree Traditional Tamil Nadu Design - Luxury Wedding Saree"
+                 srcset="4-300w.webp 300w, 4-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
             <h3>Gold Zari Silk Saree</h3>
-        
+            <p>₹10,999</p>
             <a href="/product/gold-zari" class="btn">Buy Now</a>
           </div>
-         </div>
+        </div>
       </div>
-     <!-- Products Section -->
+      
+      <!-- Second Row of Products -->
       <div class="product-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="5.jpg" loading="lazy" width="300" height="400" alt="Red Banarasi Silk Kanchipuram Saree with Zari Border">
+            <img src="5.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Pink Kanchipuram Silk Saree with Traditional Motifs - Pure Mulberry Silk"
+                 srcset="5-300w.webp 300w, 5-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
-            <h3>Red Banarasi Silk Kanchipuram Saree</h3>
-         
-            <a href="/product/red-banarasi-silk" class="btn">Buy Now</a>
+            <h3>Pink Kanchipuram Silk Saree</h3>
+            <p>₹8,799</p>
+            <a href="/product/pink-kanchipuram" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="6.jpg" loading="lazy" width="300" height="400" alt="Blue Kanchipuram Silk Saree with Temple Border">
+            <img src="6.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Purple Arni Silk Saree with Contrast Border - Handloom Silk from Tamil Nadu"
+                 srcset="6-300w.webp 300w, 6-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
-            <h3>Blue Kanchipuram Silk Saree</h3>
-     
-            <a href="/product/blue-kanchipuram" class="btn">Buy Now</a>
+            <h3>Purple Arni Silk Saree</h3>
+            <p>₹7,599</p>
+            <a href="/product/purple-arni" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="7.jpg" loading="lazy" width="300" height="400" alt="Green Pure Silk Saree with Gold Zari Work">
+            <img src="7.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Maroon Silkfast Zari Saree - Durable Zari with Pure Silk"
+                 srcset="7-300w.webp 300w, 7-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
-            <h3>Green Pure Silk Saree</h3>
-          
-            <a href="/product/green-silk" class="btn">Buy Now</a>
+            <h3>Maroon Silkfast Zari Saree</h3>
+            <p>₹6,999</p>
+            <a href="/product/maroon-silkfast" class="btn">Buy Now</a>
           </div>
         </div>
         
         <div class="product-card">
           <div class="product-image">
-            <img src="8.jpg" loading="lazy" width="300" height="400" alt="Gold Zari Silk Saree Traditional Tamil Nadu Design">
+            <img src="8.webp" 
+                 loading="lazy" 
+                 width="300" 
+                 height="400" 
+                 alt="Peach Color Kanchipuram Saree with Golden Border - Wedding Collection"
+                 srcset="8-300w.webp 300w, 8-600w.webp 600w"
+                 sizes="(max-width: 768px) 100vw, 50vw">
           </div>
           <div class="product-info">
-            <h3>Gold Zari Silk Saree</h3>
-           
-            <a href="/product/gold-zari" class="btn">Buy Now</a>
+            <h3>Peach Kanchipuram Saree</h3>
+            <p>₹9,899</p>
+            <a href="/product/peach-kanchipuram" class="btn">Buy Now</a>
           </div>
-         </div>
+        </div>
       </div>
- <!-- Products Section -->
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="18.jpg" loading="lazy" width="300" height="400" alt="Red Banarasi Silk Kanchipuram Saree with Zari Border">
-          </div>
-          <div class="product-info">
-            <h3>Red Banarasi Silk Kanchipuram Saree</h3>
-          
-            <a href="/product/red-banarasi-silk" class="btn">Buy Now</a>
-          </div>
-        </div>
-        
-        <div class="product-card">
-          <div class="product-image">
-            <img src="14.jpg" loading="lazy" width="300" height="400" alt="Blue Kanchipuram Silk Saree with Temple Border">
-          </div>
-          <div class="product-info">
-            <h3>Blue Kanchipuram Silk Saree</h3>
-         
-            <a href="/product/blue-kanchipuram" class="btn">Buy Now</a>
-          </div>
-        </div>
-        
-        <div class="product-card">
-          <div class="product-image">
-            <img src="13.jpg" loading="lazy" width="300" height="400" alt="Green Pure Silk Saree with Gold Zari Work">
-          </div>
-          <div class="product-info">
-            <h3>Green Pure Silk Saree</h3>
-           
-            <a href="/product/green-silk" class="btn">Buy Now</a>
-          </div>
-        </div>
-        
-        <div class="product-card">
-          <div class="product-image">
-            <img src="21.jpg" loading="lazy" width="300" height="400" alt="Gold Zari Silk Saree Traditional Tamil Nadu Design">
-          </div>
-          <div class="product-info">
-            <h3>Gold Zari Silk Saree</h3>
-           
-            <a href="/product/gold-zari" class="btn">Buy Now</a>
-          </div>
-         </div>
-      </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -747,35 +851,37 @@
       <div class="about-content">
         <p>Based in Arni, Tamil Nadu, VAGP Silk Sarees works directly with local weavers to preserve traditional silk craftsmanship. Our handloom Kanchipuram and Arni silk sarees are woven with pure mulberry silk and 24K gold zari.</p>
         <p>Each saree is a masterpiece, taking 7-15 days to weave using techniques passed down for generations. We guarantee authenticity with government-certified silk.</p>
+        <p>Our mission is to bring you the finest quality silk sarees while supporting the traditional weaving communities of Tamil Nadu.</p>
       </div>
     </section>
 
     <!-- Contact Section -->
-<section class="contact-section" id="contact">
-  <h2>Get In Touch</h2>
-  <div class="contact-container">
-    <p>Feel free to reach out to me through any of these channels</p>
-    
-    <div class="contact-cards">
-      <div class="contact-card" data-method="call">
-        <i class="fas fa-phone-alt"></i>
-        <span>Call Me</span>
-      </div>
+    <section class="contact-section" id="contact">
+      <h2>Get In Touch</h2>
+      <div class="contact-container">
+        <p>Feel free to reach out to us through any of these channels</p>
+        
+        <div class="contact-cards">
+          <div class="contact-card" data-method="call">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 8838043994</span>
+          </div>
 
-      <div class="contact-card" data-method="whatsapp">
-        <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp</span>
-      </div>
+          <div class="contact-card" data-method="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </div>
 
-      <div class="contact-card" data-method="email">
-        <i class="fas fa-envelope"></i>
-        <span>Email</span>
+          <div class="contact-card" data-method="email">
+            <i class="fas fa-envelope"></i>
+            <span>vagpsilks@gmail.com</span>
+          </div>
+        </div>
+        
+        <p>Or connect with us on social media using the links below</p>
       </div>
-    </div>
-    
-    <p>Or connect with me on social media using the links below</p>
-  </div>
-</section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -784,9 +890,15 @@
         <h2>About VAGP</h2>
         <p>Specializing in authentic Tamil Nadu silk sarees since 2010. GSTIN: 33ABCDE1234F1Z5</p>
         <div class="social-icons">
-          <a href="https://wa.me/918838043994" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/vagpsilks" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/vagpsilks" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/918838043994" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/vagpsilks" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/vagpsilks" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
         </div>
       </div>
 
@@ -804,17 +916,19 @@
         <h2>Customer Care</h2>
         <p><i class="fas fa-truck"></i> Free Shipping across India</p>
         <p><i class="fas fa-lock"></i> Secure Payments</p>
-          <p><a href="https://maps.app.goo.gl/4o49hAmPXTQzQaGv7"><i class="fas  fa-map-marker-alt "></i></a> Location </p>
+        <p><a href="https://maps.app.goo.gl/4o49hAmPXTQzQaGv7" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> Location</a></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      &copy; 2025 VAGP Silk Sarees. All rights reserved. | <a href="/privacy-policy" style="color:white;">Privacy Policy</a>
+      &copy; 2025 VAGP Silk Sarees. All rights reserved. | 
+      <a href="/privacy-policy" style="color:white;">Privacy Policy</a> | 
+      <a href="/terms" style="color:white;">Terms & Conditions</a>
     </div>
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/918838043994" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <a href="https://wa.me/918838043994" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -851,6 +965,25 @@
       });
     });
 
+    // Contact card interactions
+    const contactCards = document.querySelectorAll('.contact-card');
+    contactCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const method = this.getAttribute('data-method');
+        switch(method) {
+          case 'call':
+            window.location.href = 'tel:+918838043994';
+            break;
+          case 'whatsapp':
+            window.open('https://wa.me/918838043994', '_blank');
+            break;
+          case 'email':
+            window.location.href = 'mailto:vagpsilks@gmail.com';
+            break;
+        }
+      });
+    });
+
     // Initialize animations
     window.addEventListener('load', () => {
       setTimeout(typeLetter, 1000);
@@ -871,6 +1004,24 @@
         });
       });
     });
+
+    // Lazy loading for images
+    if ('loading' in HTMLImageElement.prototype) {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const lazyLoadScript = document.createElement('script');
+      lazyLoadScript.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js';
+      document.body.appendChild(lazyLoadScript);
+      lazyLoadScript.onload = () => {
+        const lazyLoadInstance = new LazyLoad({
+          elements_selector: 'img[loading="lazy"]'
+        });
+      };
+    }
   </script>
 </body>
 </html>
