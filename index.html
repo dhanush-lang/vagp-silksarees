@@ -315,6 +315,27 @@
   <a href="https://wa.me/+918122574259" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+       <script>
+    const contactCards = document.querySelectorAll('.contact-card');
+
+contactCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const method = card.dataset.method;
+    openContactMethod(method);
+  });
+});
+
+function openContactMethod(method) {
+  if (method === 'call') {
+    window.location.href = 'tel:+918122574259';
+  } else if (method === 'whatsapp') {
+    window.open('https://wa.me/918122574259', '_blank');
+  } else if (method === 'instagram') {
+    window.open('https://instagram.com/yourcompany', '_blank');
+  }
+}
+
+  </script>
   <script src="script.js"></script>
 
  
