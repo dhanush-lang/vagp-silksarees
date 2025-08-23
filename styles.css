@@ -1,5 +1,5 @@
 
-   :root {
+    :root {
   --primary-color: #d81b60;
   --secondary-color: #5b1b1b;
   --light-color: #fff8f5;
@@ -231,6 +231,7 @@ section {
 
 .product-info {
   padding: 20px;
+  text-align: center;
 }
 
 .product-info h3 {
@@ -254,7 +255,11 @@ section {
   border-radius: 5px;
   font-weight: 500;
   transition: background-color 0.3s;
+  display: inline-block;
+  margin: 0 auto; /* 👈 centers the button */
 }
+
+
 
 .btn:hover {
   background-color: #b7154d;
